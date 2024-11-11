@@ -3,5 +3,6 @@ model.png
 submission*.zip
 model.py
 images/*.jpg
+keras_overlays/*
 __pycache__
 training_set.npz
