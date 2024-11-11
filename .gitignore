@@ -1,0 +1,7 @@
+weights.keras
+model.png
+submission*.zip
+model.py
+images/*.jpg
+__pycache__
+training_set.npz
