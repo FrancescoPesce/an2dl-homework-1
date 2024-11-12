@@ -4,5 +4,6 @@ submission*.zip
 model.py
 images/*.jpg
 keras_overlays/*
+keras_overlays_augmented/*
 __pycache__
 training_set.npz
