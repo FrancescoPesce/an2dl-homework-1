@@ -1,9 +1,10 @@
-weights.keras
+*.keras
 model.png
 submission*.zip
 model.py
 images/*.jpg
-keras_overlays/*
-keras_overlays_augmented/*
+images_augmented/*.jpg
+keras_overlays/*.png
+keras_overlays_augmented/*.png
 __pycache__
 training_set.npz

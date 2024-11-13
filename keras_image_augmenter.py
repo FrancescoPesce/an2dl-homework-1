@@ -4,7 +4,10 @@ from tensorflow import keras as tfk
 
 overlays = [f for f in os.listdir("keras_overlays")]
 
-overlay_augmentation = keras_cv.layers.RandAugment(value_range=(0,255))
+overlay_augmentation = keras_cv.layers.RandAugment(
+    value_range=(0,255),
+    magnitude=0.2,
+)
 
 for i, over in enumerate(overlays):
     image = tfk.preprocessing.image.load_img("keras_overlays/"+over)
