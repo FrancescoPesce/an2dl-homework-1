@@ -51,7 +51,7 @@ def save_model(model, filename="averaged_model.keras"):
 # Example usage:
 # Directory containing your weight files
 weight_files = [f for f in os.listdir('.') if f.endswith('.keras')]
-loss_threshold = 0.85  # Set your loss threshold
+loss_threshold = 0.8  # Set your loss threshold
 
 # Get the base model and averaged weights
 base_model, averaged_weights = average_weights(weight_files, loss_threshold)
