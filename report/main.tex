@@ -397,17 +397,19 @@
       \begin{table}[H]
           \centering
           \setlength{\tabcolsep}{3pt}
-          \caption{Scores obtained by the best models using different techniques.}
+          \caption{Scores obtained by the best model we developed for each technique.
+                   Results marked with * are approximate, due to being computed before
+                   the submissions reset to the Codabench platform.}
           \begin{tabularx}{\linewidth}{lY}
               \toprule
               Experiment & Score \\
               \midrule
-              Simple CNN & 0.00 \\
-              Data Augmentation & 0.00 \\
-              Overlaying & 0.00 \\
-              Keras CV & 0.00 \\
-              Richer architectures & 0.00 \\
-              Custom Block & 0.00 \\
+              Simple CNN & 0.20* \\
+              Data Augmentation & 0.25* \\
+              Overlaying & 0.53 \\
+              Keras CV & 0.71 \\
+              Richer architectures & 0.80 \\
+              Custom Block & 0.88 \\
               \bottomrule
           \end{tabularx}
           \label{tb:Measurements}
