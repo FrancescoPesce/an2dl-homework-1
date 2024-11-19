@@ -8,3 +8,9 @@ keras_overlays/*.png
 keras_overlays_augmented/*.png
 __pycache__
 training_set.npz
+
+# LaTeX files
+report/main.pdf
+report/main.aux
+report/main.log
+report/main.out
