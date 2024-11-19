@@ -4,10 +4,10 @@ submission*.zip
 model.py
 images/*.jpg
 images_augmented/*.jpg
+keras_overlays/*.png
+keras_overlays_augmented/*.png
 __pycache__
 training_set.npz
-keras_overlays/*png
-keras_overlays_augmented/*png
 
 # LaTeX files
 report/main.pdf
