@@ -139,6 +139,20 @@
       % \noindent Reference these equations in your text, like:``As shown in
       % equation~\ref{eq:model}..."
 
+      Most of the development process used a Jupyter notebook, which was used to load and
+      analyse the data, apply augmentation techniques, define and train the models, and
+      generate and test the submissions for the Codabench platform.
+
+      We used the whole dataset we were provided, except for the images we believed to be
+      doctored, which we discarded. We initially divided our dataset into training, validation
+      and test sets, but upon noticing that the accuracy on the test set was unrelated to the
+      actual accuracy on Codabench, we decided to get rid of it, and split the dataset into a 
+      training set (80\% of the data) and a validation set.
+
+      All of the models we produced are formed of a convolutional CNN, used for feature extraction 
+      from the images, and a dense neural network at the top of the net. Since this is a multi-class
+      classification problem, the loss function we employed was categorical crossentropy.
+
       After experimenting with different models and techniques, as detailed in
       the Section \ref{sec:experiments}, we found that the best approach was to 
       use a chain of convolutional and downsampling layers, followed by two instances
@@ -146,11 +160,15 @@
       blocks, as illustrated in Section \ref{sec:custom_block}.
 
       The output of these custom blocks is then fed into a global average
-      pooling layer, in order to reduce the dimensionality of the output. A
-      hidden dense layer with 128 units and a following output layer with 8
-      units and a softmax activation function are used to classify the images.
+      pooling layer, in order to reduce the dimensionality of the output and as a regularization technique. 
+      Finally, a hidden dense layer with 128 units, a Dropout layer for regularization, and an output layer 
+      with 8 units and a softmax activation function are used to classify the images.
 
-      TODO (Francesco): talk more about the final model, and about think in common to all models.
+      The final network has around 1.9 million parameters, and achieved an accuracy of 0.88 on Codabench
+      during the development phase. The information provided above describes a family of models, with
+      each model differing in the optimizer employed (e.g. Adam or Lion), the number of output channels
+      for each layer and the number of convolutional layers before the custom blocks. The final model 
+      was developed after analyzing the complex design space spanned by said parameters.
 
       % -----------------------------------------------------------------------
       % EXPERIMENTS
