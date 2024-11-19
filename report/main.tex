@@ -375,9 +375,24 @@
       %     \item Explain any unexpected outcomes
       % \end{itemize}
 
-      TODO: add a table here
       \label{tab:results}
-      \begin{table}
+      \begin{table}[H]
+          \centering
+          \setlength{\tabcolsep}{3pt}
+          \caption{Scores obtained by the best models using different techniques.}
+          \begin{tabularx}{\linewidth}{lY}
+              \toprule
+              Experiment & Score \\
+              \midrule
+              Simple CNN & 0.00 \\
+              Data Augmentation & 0.00 \\
+              Overlaying & 0.00 \\
+              Keras CV & 0.00 \\
+              Richer architectures & 0.00 \\
+              Custom Block & 0.00 \\
+              \bottomrule
+          \end{tabularx}
+          \label{tb:Measurements}
       \end{table}
 
       % -----------------------------------------------------------------------
