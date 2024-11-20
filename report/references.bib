@@ -11,3 +11,101 @@
     doi = {https://doi.org/10.1016/j.patter.2022.100543},
     url = {https://www.sciencedirect.com/science/article/pii/S2666389922001465}
 } 
+@INPROCEEDINGS{ImageNet,
+  author={Deng, Jia and Dong, Wei and Socher, Richard and Li, Li-Jia and Kai Li and Li Fei-Fei},
+  booktitle={2009 IEEE Conference on Computer Vision and Pattern Recognition}, 
+  title={ImageNet: A large-scale hierarchical image database}, 
+  year={2009},
+  volume={},
+  number={},
+  pages={248-255},
+  keywords={Large-scale systems;Image databases;Explosions;Internet;Robustness;Information retrieval;Image retrieval;Multimedia databases;Ontologies;Spine},
+  doi={10.1109/CVPR.2009.5206848}}
+@inproceedings{NIPS1989_53c3bce6,
+ author = {LeCun, Yann and Boser, Bernhard and Denker, John and Henderson, Donnie and Howard, R. and Hubbard, Wayne and Jackel, Lawrence},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {D. Touretzky},
+ pages = {},
+ publisher = {Morgan-Kaufmann},
+ title = {Handwritten Digit Recognition with a Back-Propagation Network},
+ url = {https://proceedings.neurips.cc/paper_files/paper/1989/file/53c3bce66e43be4f209556518c2fcb54-Paper.pdf},
+ volume = {2},
+ year = {1989}
+}
+@inproceedings{TransferLearning,
+author = {Yosinski, Jason and Clune, Jeff and Bengio, Yoshua and Lipson, Hod},
+title = {How transferable are features in deep neural networks?},
+year = {2014},
+publisher = {MIT Press},
+address = {Cambridge, MA, USA},
+abstract = {Many deep neural networks trained on natural images exhibit a curious phenomenon in common: on the first layer they learn features similar to Gabor filters and color blobs. Such first-layer features appear not to be specific to a particular dataset or task, but general in that they are applicable to many datasets and tasks. Features must eventually transition from general to specific by the last layer of the network, but this transition has not been studied extensively. In this paper we experimentally quantify the generality versus specificity of neurons in each layer of a deep convolutional neural network and report a few surprising results. Transferability is negatively affected by two distinct issues: (1) the specialization of higher layer neurons to their original task at the expense of performance on the target task, which was expected, and (2) optimization difficulties related to splitting networks between co-adapted neurons, which was not expected. In an example network trained on ImageNet, we demonstrate that either of these two issues may dominate, depending on whether features are transferred from the bottom, middle, or top of the network. We also document that the transferability of features decreases as the distance between the base task and target task increases, but that transferring features even from distant tasks can be better than using random features. A final surprising result is that initializing a network with transferred features from almost any number of layers can produce a boost to generalization that lingers even after fine-tuning to the target dataset.},
+booktitle = {Proceedings of the 27th International Conference on Neural Information Processing Systems - Volume 2},
+pages = {3320–3328},
+numpages = {9},
+location = {Montreal, Canada},
+series = {NIPS'14}
+}
+@article{Kingma2014AdamAM,
+  title={Adam: A Method for Stochastic Optimization},
+  author={Diederik P. Kingma and Jimmy Ba},
+  journal={CoRR},
+  year={2014},
+  volume={abs/1412.6980},
+  url={https://api.semanticscholar.org/CorpusID:6628106}
+}
+@INPROCEEDINGS {Inception,
+author = { Szegedy, Christian and Wei Liu and Yangqing Jia and Sermanet, Pierre and Reed, Scott and Anguelov, Dragomir and Erhan, Dumitru and Vanhoucke, Vincent and Rabinovich, Andrew },
+booktitle = { 2015 IEEE Conference on Computer Vision and Pattern Recognition (CVPR) },
+title = {{ Going deeper with convolutions }},
+year = {2015},
+volume = {},
+ISSN = {1063-6919},
+pages = {1-9},
+abstract = { We propose a deep convolutional neural network architecture codenamed Inception that achieves the new state of the art for classification and detection in the ImageNet Large-Scale Visual Recognition Challenge 2014 (ILSVRC14). The main hallmark of this architecture is the improved utilization of the computing resources inside the network. By a carefully crafted design, we increased the depth and width of the network while keeping the computational budget constant. To optimize quality, the architectural decisions were based on the Hebbian principle and the intuition of multi-scale processing. One particular incarnation used in our submission for ILSVRC14 is called GoogLeNet, a 22 layers deep network, the quality of which is assessed in the context of classification and detection. },
+keywords = {},
+doi = {10.1109/CVPR.2015.7298594},
+url = {https://doi.ieeecomputersociety.org/10.1109/CVPR.2015.7298594},
+publisher = {IEEE Computer Society},
+address = {Los Alamitos, CA, USA},
+month =Jun}
+@misc{chollet2015keras,
+  title={Keras},
+  author={Chollet, Fran\c{c}ois and others},
+  year={2015},
+  howpublished={\url{https://keras.io}},
+} 
+
+@InProceedings{pmlr-v37-ioffe15,
+  title = 	 {Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift},
+  author = 	 {Ioffe, Sergey and Szegedy, Christian},
+  booktitle = 	 {Proceedings of the 32nd International Conference on Machine Learning},
+  pages = 	 {448--456},
+  year = 	 {2015},
+  editor = 	 {Bach, Francis and Blei, David},
+  volume = 	 {37},
+  series = 	 {Proceedings of Machine Learning Research},
+  address = 	 {Lille, France},
+  month = 	 {07--09 Jul},
+  publisher =    {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v37/ioffe15.pdf},
+  url = 	 {https://proceedings.mlr.press/v37/ioffe15.html},
+  abstract = 	 {Training Deep Neural Networks is complicated by the fact that the distribution of each layer’s inputs changes during training, as the parameters of the previous layers change. This slows down the training by requiring lower learning rates and careful parameter initialization, and makes it notoriously hard to train models with saturating nonlinearities. We refer to this phenomenon as internal covariate shift, and address the problem by normalizing layer inputs. Our method draws its strength from making normalization a part of the model architecture and performing the normalization for each training mini-batch. Batch Normalization allows us to use much higher learning rates and be less careful about initialization, and in some cases eliminates the need for Dropout. Applied to a stateof-the-art image classification model, Batch Normalization achieves the same accuracy with 14 times fewer training steps, and beats the original model by a significant margin. Using an ensemble of batch-normalized networks, we improve upon the best published result on ImageNet classification: reaching 4.82% top-5 test error, exceeding the accuracy of human raters.}
+}
+
+@article{Lin2013NetworkIN,
+  title={Network In Network},
+  author={Min Lin and Qiang Chen and Shuicheng Yan},
+  journal={CoRR},
+  year={2013},
+  volume={abs/1312.4400},
+  url={https://api.semanticscholar.org/CorpusID:16636683}
+}
+
+@article{He2015DeepRL,
+  title={Deep Residual Learning for Image Recognition},
+  author={Kaiming He and X. Zhang and Shaoqing Ren and Jian Sun},
+  journal={2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2015},
+  pages={770-778},
+  url={https://api.semanticscholar.org/CorpusID:206594692}
+}

@@ -75,7 +75,7 @@
       task proposed in the first homework of the Artificial Neural Networks and
       Deep Learning course at Politecnico di Milano. The goal of the project is
       to classify blood cell images into 8 different classes by using deep
-      learning techniques such as Convolutional Neural Networks (CNNs).
+      learning techniques such as Convolutional Neural Networks (CNNs).\cite{NIPS1989_53c3bce6}
 
       % -----------------------------------------------------------------------
       % PROBLEM ANALYSIS
@@ -112,7 +112,7 @@
 
       The classes within the dataset were imbalanced, with some classes having
       more samples than others, with the highest inbalance being a 2.75x imbalance,
-      after removing doctored images. Multiple experiments,such as using data 
+      after removing doctored images. Multiple experiments, such as using data 
       augmentation techniques to balance out the number of samples for each class 
       in the training set, seemed to indicate that the distribution of labels of 
       the traning and test set was similar, so we decided not to adjust the prior 
@@ -154,7 +154,7 @@
       classification problem, the loss function we employed was categorical crossentropy.
 
       After experimenting with different models and techniques, as detailed in
-      the Section \ref{sec:experiments}, we found that the best approach was to 
+      Section \ref{sec:experiments}, we found that the best approach was to 
       use a chain of convolutional and downsampling layers, followed by two instances
       of a custom block that combines the features of residual networks and inception 
       blocks, as illustrated in Section \ref{sec:custom_block}.
@@ -221,7 +221,7 @@
                   overlays to the images of the training and validation sets, using
                   different image overlaying techniques, such as multiplying the 
                   normalized pixel values and using convex combinations.
-            \item \textbf{Keras CV:} Using the Keras CV library provided the first
+            \item \textbf{Keras CV:} Using the Keras CV library\cite{chollet2015keras} provided the first
                   satisfactory results. Compared to previous data augmentation techniques,
                   the library provided richer augmentations, which could be applied
                   in a complex pipeline. We also attempted to manually implement
@@ -237,7 +237,7 @@
             \item \textbf{Richer architectures:} While previous networks all used trivial 
                   CNN architectures, we tried experimenting with more complex CNNs,
                   with significant result being obtained by using Inception blocks,
-                  Residual networks, Global Average Pooling and Batch Normalization layers.
+                  Residual networks, Global Average Pooling\cite{Lin2013NetworkIN} and Batch Normalization layers\cite{pmlr-v37-ioffe15}.
             \item \textbf{Custom Block:} A custom block was implemented to mix the 
                   features of the residual and inception blocks. The rationale and more
                   details are discussed in section \ref{sec:custom_block}. This block 
@@ -246,10 +246,10 @@
 
       \subsection{Other experiments}
 
-      A failed experiment that merits explicit mention is using transfer learning.
+      A failed experiment that merits explicit mention is using transfer learning\cite{TransferLearning}.
       We tried transfer learning from some well-known CNN architectures, available
       as Keras applications, such as VGG19, ResNet50V2 and MobileNetV2. For all
-      architectures, we used the "ImageNet" pre-trained weights, removed the dense
+      architectures, we used the "ImageNet"~\cite{ImageNet} pre-trained weights, removed the dense
       network and added a custom one. We attempted both training just the dense
       network, freezing the weights of the feature extraction network, and unfreezing
       top convolutional layers, but achieved very poor results with both techniques.
@@ -262,7 +262,7 @@
       Another failed experiment is using the Lion and stochastic gradient descent
       with momentum optimized provided by Keras. We attempted to use these optimizers
       at multiple points of our development, including for the final model. However,
-      the results were always sub-par, or at most the same, compared to the Adam 
+      the results were always sub-par, or at most the same, compared to the Adam\cite{Kingma2014AdamAM} 
       optimizer.
 
       Other failed experiments include performing test-time agumentation, i.e. 
@@ -353,14 +353,14 @@
       % Explain the custom block in detail
 
       Two of the most successful experiments were adding inception blocks and
-      residual blocks. In particular, the latter achieved a larger accuracy
+      residual\cite{He2015DeepRL} blocks. In particular, the latter achieved a larger accuracy
       both during training and testing, due to the fact that the training process
       is often not capable of properly train deep models. The residual blocks 
       inject skip connections into the network, which helping the learning process
       by making deeper levers learn residuals with respect to the identity function,
       simplifying the learning process.
 
-      With inception blocks, a set of differently sized filters are applied to the block's 
+      With inception blocks\cite{Inception}, a set of differently sized filters are applied to the block's 
       input, and the results are concatenated as output channels. This helps the network 
       capture both fine-grained and coarse-grained features of the dataset. The network
       with inception blocks performed worse than the one with residual blocks, likely
