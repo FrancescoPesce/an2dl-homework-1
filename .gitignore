@@ -17,3 +17,6 @@ report/main.out
 report/main.bbl
 report/main.blg
 report/main.dvi
+
+# Virtual environment
+venv/
