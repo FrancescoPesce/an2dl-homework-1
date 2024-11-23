@@ -8,6 +8,7 @@ keras_overlays/*.png
 keras_overlays_augmented/*.png
 __pycache__
 training_set.npz
+final_weights
 
 # LaTeX files
 report/main.pdf
